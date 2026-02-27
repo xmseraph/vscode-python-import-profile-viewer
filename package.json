@@ -1,0 +1,48 @@
+{
+  "name": "import-profile-viewer",
+  "displayName": "Import Profile Viewer",
+  "description": "View Python -X importtime profiling results as a collapsible tree in VS Code",
+  "version": "0.0.2",
+  "publisher": "xmseraph",
+  "icon": "media/icon.png",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "engines": {
+    "vscode": "^1.80.0"
+  },
+  "categories": [
+    "Visualization"
+  ],
+  "activationEvents": [],
+  "main": "./out/extension.js",
+  "contributes": {
+    "commands": [
+      {
+        "command": "importProfileViewer.open",
+        "title": "Open with Import Profile Viewer"
+      }
+    ],
+    "menus": {
+      "explorer/context": [
+        {
+          "command": "importProfileViewer.open",
+          "when": "resourceExtname == .txt || resourceExtname == .json || resourceExtname == .log",
+          "group": "navigation"
+        }
+      ]
+    }
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run compile",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0",
+    "@types/vscode": "^1.80.0",
+    "sharp": "^0.34.5",
+    "typescript": "^5.0.0"
+  }
+}
