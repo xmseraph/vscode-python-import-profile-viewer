@@ -2,12 +2,16 @@
   "name": "import-profile-viewer",
   "displayName": "Import Profile Viewer",
   "description": "View Python -X importtime profiling results as a collapsible tree in VS Code",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "publisher": "xmseraph",
   "icon": "media/icon.png",
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/xmseraph/vscode-python-import-profile-viewer.git"
+  },
+  "homepage": "https://github.com/xmseraph/vscode-python-import-profile-viewer#readme",
+  "bugs": {
+    "url": "https://github.com/xmseraph/vscode-python-import-profile-viewer/issues"
   },
   "engines": {
     "vscode": "^1.80.0"
